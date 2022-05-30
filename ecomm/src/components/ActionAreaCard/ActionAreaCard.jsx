@@ -46,12 +46,11 @@ export default function ActionAreaCard() {
   
   return (
     <>
+    <h1 className='page-title'>Men's Festival Clothing</h1>
+    <p className='page-p'>Dreaming of neon, metallic and tie-dye? It must be festival season. Invent your own style with our edit of men's festival clothing, featuring unique outfits from all your favourite brands. Stand out in fresh new-season styles from ASOS DESIGN – think festival co-ords, fringe-detailed jackets and bold print tees or get experimental in bucket hats and graphic-print shirts courtesy of COLLUSION. Complete your look with retro sunnies from New Look – and don't forget, no festival outfit is complete without a bum bag.</p>
     <Container  >
     <Grid  container direction="row"j ustifyContent="center"
   alignItems="center"> 
-    
-      
-      
       {productsArr.map((item,i)=>{
         return  (
           <Grid  item key={i} xs={12} sm={6} md={4}>

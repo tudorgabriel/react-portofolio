@@ -22,11 +22,8 @@ export default function ButtonAppBar() {
                     </Typography>
                     <Button color="inherit">Login</Button>
                     <Button color="inherit">Test</Button>
-
                     <Button color="inherit">Login</Button>
-
                     <Button color="inherit">Login</Button>
-
                 </Toolbar>
             </AppBar>
         </Box>
