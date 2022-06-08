@@ -12,8 +12,6 @@ export default function ButtonAppBar() {
             flexGrow: 1,
             boxShadow: 1,
             color: 'primary.main'
-
-
         }}>
             <AppBar position="static" color='default'>
                 <Toolbar>
