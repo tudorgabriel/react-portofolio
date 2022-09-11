@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../Hero/Hero.scss";
 import { useNavigate } from "react-router-dom";
 
@@ -7,6 +7,7 @@ function Test() {
   const handleClick = () => {
     navigate("/products");
   };
+
   return (
     <div className="hero">
       <div className="h1-div">

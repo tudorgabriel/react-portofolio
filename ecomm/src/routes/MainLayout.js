@@ -4,6 +4,7 @@ import ButtonAppBar from '../components/Nav/ButtonAppBar';
 import '../components/Nav/ButtonAppBar';
 import '../components/CircularIndeterminate/CircularIndeterminate';
 import CircularIndeterminate from '../components/CircularIndeterminate/CircularIndeterminate';
+import Cart from '../components/Cart/Cart';
 
 const ActionAreaCard = lazy(() => import('../components/ActionAreaCard/ActionAreaCard'));
 const Hero = lazy(() => import('../components/Hero/Hero'));
@@ -21,15 +22,24 @@ const routes = [
         name: 'Dashboard',
         exact: true,
         component: <Hero />
+    },
+    {
+        path: '/cart',
+        name: 'Cart',
+        exact: true,
+        component: <Cart />
     }
+
+
 ]
 
 const MainLayout = () => {
     return (
         <div>
-            <ButtonAppBar />
+
             <div className='content-container'>
                 <Router>
+                    <ButtonAppBar />
                     <Suspense fallback={<div><CircularIndeterminate /></div>}>
                         <Routes>
                             {routes.map((prop, key) => {

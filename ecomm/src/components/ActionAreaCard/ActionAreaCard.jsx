@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useContext } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -10,34 +10,14 @@ import ShareIcon from "@material-ui/icons/Share";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import Grid from "@material-ui/core/Grid";
 import { Container } from "@mui/material";
+import { ProductsContext } from "../../context/products.context";
+import { CartContext } from "../../context/cart.context";
 
 export default function ActionAreaCard() {
-  const productsArr = [
-    {
-      title: "ASOS DESIGN 90s oversized shirt in bleachwash checkerboard print",
-      price: "39.99",
-    },
-    {
-      title: "ASOS DESIGN 90s oversized shirt in bleachwash checkerboard print",
-      price: "39.99",
-    },
-    {
-      title: "ASOS DESIGN 90s oversized shirt in bleachwash checkerboard print",
-      price: "39.99",
-    },
-    {
-      title: "ASOS DESIGN 90s oversized shirt in bleachwash checkerboard print",
-      price: "39.99",
-    },
-    {
-      title: "ASOS DESIGN 90s oversized shirt in bleachwash checkerboard print",
-      price: "39.99",
-    },
-    {
-      title: "ASOS DESIGN 90s oversized shirt in bleachwash checkerboard print",
-      price: "39.99",
-    },
-  ];
+  const { products } = useContext(ProductsContext);
+  const { addItemToCart } = useContext(CartContext);
+  const { cart } = useContext(CartContext);
+  console.log(cart.length);
 
   return (
     <>
@@ -59,15 +39,15 @@ export default function ActionAreaCard() {
           justifyContent="center"
           alignItems="center"
         >
-          {productsArr.map((item, i) => {
+          {products.map((item, i) => {
             return (
-              <Grid item key={i} xs={12} sm={6} md={4}>
+              <Grid item key={i.id} xs={12} sm={6} md={4}>
                 <Card className="card" sx={{ maxWidth: 345 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
                       height="380"
-                      image={require(`../../_assets/images/img${i}.jpg`)}
+                      image={item.image}
                       alt="green iguana"
                     />
                     <CardContent>
@@ -92,7 +72,7 @@ export default function ActionAreaCard() {
                         <FavoriteIcon />
                       </IconButton>
                       <IconButton aria-label="share">
-                        <ShareIcon />
+                        <ShareIcon onClick={() => addItemToCart(item)} />
                       </IconButton>
                     </CardActions>
                   </CardActionArea>
