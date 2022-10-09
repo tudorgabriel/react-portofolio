@@ -9,6 +9,7 @@ function CartModal() {
   const { cart } = useContext(CartContext);
   const { isOpen, setIsOpen } = useContext(CartContext);
   const { total } = useContext(CartContext);
+  const { removeAllItems } = useContext(CartContext);
   const toggleIsCartOpen = () => setIsOpen(!isOpen);
   let navigate = useNavigate();
   const handleClick = () => {
@@ -35,7 +36,10 @@ function CartModal() {
                 <p>Price:{item.price} $</p>
                 <p>Quantity: {item.quantity}</p>
                 <span>
-                  <AiFillDelete className="delete-icon" />
+                  <AiFillDelete
+                    onClick={() => removeAllItems(item)}
+                    className="delete-icon"
+                  />
                 </span>
               </div>
             </section>

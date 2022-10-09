@@ -4,39 +4,44 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineShoppingCart, AiOutlineSearch } from 'react-icons/ai';
 import '../Nav/ButtonAppBar.scss';
 import { CartContext } from "../../context/cart.context";
 import CartModal from "../Cart/CartModal";
 import '../../components/Cart/CartModal.scss';
-
+import '../../context/products.context';
+import { ProductsContext } from "../../context/products.context";
+import { useNavigate } from "react-router-dom";
 export default function ButtonAppBar() {
     const { isOpen, setIsOpen } = useContext(CartContext);
     const { cart } = useContext(CartContext);
     const { cartCount } = useContext(CartContext);
     const toggleIsCartOpen = () => setIsOpen(!isOpen);
-
-
+    const { handleSearch } = useContext(ProductsContext);
+    const { searchInput, setSearchInput } = useContext(ProductsContext)
+    const navigate = useNavigate();
 
     return (
         <>
-            <Box sx={{
-                flexGrow: 1,
-                boxShadow: 1,
-                color: 'primary.main'
-            }}>
-                <AppBar position="static" color='default'>
-                    <Toolbar>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                            My new store
-                        </Typography>
-                        < AiOutlineShoppingCart onClick={toggleIsCartOpen} />  <Button onClick={toggleIsCartOpen} color="inherit">{cartCount} Cart</Button>
-                        <Button color="inherit">Login</Button>
-                    </Toolbar>
-                </AppBar>
+            <section className="nav">
+                <a href="/">Home</a>
+                <a href="/products">Products</a>
+                <a href="/cart">Cart <AiOutlineShoppingCart /></a>
+            </section>
 
-            </Box>
-            {isOpen && < CartModal className='test' />}
+            <div className="second-hed">
+                <div className="search">
+                    {searchInput != null && <AiOutlineSearch onClick={() => { navigate('/products') }} className="i" />}
+                    <label for="search"></label>
+                    <input
+                        onChange={handleSearch}
+                        value={searchInput}
+                        placeholder="Search for items and brands" type="search" id="gsearch" name="gsearch"></input>
+                </div>
+
+            </div>
+
+
         </>
     );
 }
