@@ -2,85 +2,243 @@
   {
     "id": "1",
     "title": "ASOS DESIGN 90s oversized shirt in bleachwash checkerboard print",
-    "price": "39.99",
-    "image": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    "price": 145.99,
+    "image": "https://images.asos-media.com/products/asos-design-faux-leather-trench-coat-with-contrast-borg-lining-in-black/202993758-1-black?$n_480w$&wid=476&fit=constrain",
+    "type":"Shorts",
+    "size": "XL"
+
   },
   {
     "id": "2",
     "title": "ASOS",
-    "price": "39.99",
-    "image": "https://images.unsplash.com/photo-1472437774355-71ab6752b434?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+    "price": 145.99,
+    "image": "https://images.asos-media.com/products/asos-design-borg-puffer-jacket-in-sage-green/202454416-1-lightgreen?$n_480w$&wid=476&fit=constrain",
+    "type": "Accesories",
+    "size": "XL"
+
+    
   },
   {
     "id": "3",
-    "title": "ASOS DESIGN 90s oversized shirt in bleachwash checkerboard print",
-    "price": "39.99",
-    "image": "https://images.unsplash.com/photo-1610360655260-decd32e267aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    "title": "ASOS DESIGN 90s oversized shirt in bleachwash checkerboard prints",
+    "price": 145.99,
+    "image": "https://images.asos-media.com/products/asos-design-check-regular-fit-puffer-in-brown-and-orange-with-hood/200962541-1-mustard?$n_320w$&wid=317&fit=constrain",
+    "type" : "Tops",
+    "size": "XL"
+
   },
   {
     "id": "4",
     "title": "ASOS DESIGN 90s oversized shirt in bleachwash checkerboard print",
-    "price": "39.99",
-    "image": "https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=739&q=80"
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=739&q=80",
+    "type" : "Jeans",
+    "size": "XL"
+
   },
   {
     "id": "5",
     "title": "ASOS DESIGN 90s oversized shirt in bleachwash checkerboard print",
-    "price": "39.99",
-    "image": "https://images.unsplash.com/photo-1575314027842-c33656c1f3dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+    "price": 145.99,
+    "image": "https://images.asos-media.com/products/asos-dark-future-oversized-hoodie-in-faux-fur-with-logo-embroidery-in-light-brown/202522994-1-lightbrown?$n_320w$&wid=317&fit=constrain",
+    "type": "Outwear",
+    "size": "XL"
+
   },
   {
     "id": "6",
     "title": "Bolongaro Trevor Sport deltana hoodie in black",
-    "price": "48.99",
-    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+    "price": 145.99,
+    "image": "https://images.asos-media.com/products/asos-design-check-regular-fit-puffer-in-brown-and-orange-with-hood/200962541-1-mustard?$n_320w$&wid=317&fit=constrain",
+    "type": "Shorts",
+    "size": "XL"
+
   },
   {
     "id": "7",
     "title": "Bolongaro Trevor Sport deltana hoodie in black",
-    "price": "48.99",
-    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type" : "Jeans",
+    "size": "XL"
+
   },
   {
     "id": "8",
     "title": "Bolongaro Trevor Sport deltana hoodie in black",
-    "price": "48.99",
-    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+    "price": 145.99,
+    "image": "https://images.asos-media.com/products/asos-design-oversized-track-jacket-in-green-faux-fur/202758932-1-swamp?$n_480w$&wid=476&fit=constrain",
+    "type" : "Jeans",
+    "size": "XL"
+
   },
   {
     "id": "9",
     "title": "Bolongaro Trevor Sport deltana hoodie in black",
-    "price": "48.99",
-    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+    "price": 145.99,
+    "image": "https://images.asos-media.com/products/asos-design-oversized-faux-fur-hoodie-with-brown-colourblock/202888958-1-multi?$n_480w$&wid=476&fit=constrain",
+    "type": "Shorts"
+
   },
   {
     "id": "10",
     "title": "Bolongaro Trevor Sport deltana hoodie in black",
-    "price": "48.99",
-    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+    "price": 145.99,
+    "image": "https://images.asos-media.com/products/asos-design-oversized-wool-look-shacket-in-stone/202232059-1-stone?$n_480w$&wid=476&fit=constrain",
+    "type": "Shorts",
+    "size": "L"
+
   },
   {
     "id": "11",
     "title": "Bolongaro Trevor Sport deltana hoodie in black",
-    "price": "48.99",
-    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+    "price": 145.99,
+    "image": "https://images.asos-media.com/products/asos-design-borg-jacket-with-scenic-print/202824780-1-multi?$n_480w$&wid=476&fit=constrain",
+    "type": "Shorts",
+    "size": "L"
+
   }
   , {
     "id": "12",
     "title": "Dickies Marbury hoodie in black",
-    "price": "48.99",
-    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type" :"Tops",
+    "size":"L"
+
   }
   , {
     "id": "13",
     "title": "Trevor Sport deltana hoodie in black",
-    "price": "48.99",
-    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type" :"Tops",
+    "size": "M"
+
   }
   , {
     "id": "14",
     "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
-    "price": "48.99",
-    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type" : "Tops",
+    "size": "M"
+
+  },
+   {
+    "id": "15",
+    "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type" : "Tops",
+    "size": "M"
+
+  },
+   {
+    "id": "16",
+    "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type": "Accesories",
+    "size": "S"
+
+  },
+   {
+    "id": "17",
+    "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type": "Accesories",
+    "size": "S"
+
+  },   {
+    "id": "18",
+    "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type": "Accesories",
+    "size": "S"
+
+  },
+   {
+    "id": "19",
+    "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type": "Accesories",
+    "size": "2XS"
+
+  },
+   {
+   "id": "20",
+    "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type": "Accesories",
+    "size": "XS"
+
+  },
+   {
+    "id": "21",
+    "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type": "Accesories",
+    "size": "2XS"
+
+
+  },
+   {
+    "id": "22",
+    "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type": "Accesories",
+    "size": "2XS"
+
+  },   {
+    "id": "23",
+    "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type": "Accesories",
+    "size": "L"
+
   }
-]
+  ,   {
+    "id": "24",
+    "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type": "Accesories",
+    "size": "L"
+
+  }
+  ,   {
+    "id": "25",
+    "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type": "Accesories",
+    "size": "L"
+
+  }
+  ,   {
+    "id": "26",
+    "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
+    "price": 145.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type": "Accesories",
+    "size": "L"
+
+  }
+  ,   {
+    "id": "27",
+    "title": "Crooked Tongues oversized hoodie in teddy borg with bear applique in brown",
+    "price": 1233.99,
+    "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "type": "Accesories",
+    "size": "L"
+
+  }
+] 

@@ -1,9 +1,5 @@
 import React, { useContext, useState } from "react";
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+
 import { AiOutlineShoppingCart, AiOutlineSearch } from 'react-icons/ai';
 import '../Nav/ButtonAppBar.scss';
 import { CartContext } from "../../context/cart.context";
@@ -11,7 +7,7 @@ import CartModal from "../Cart/CartModal";
 import '../../components/Cart/CartModal.scss';
 import '../../context/products.context';
 import { ProductsContext } from "../../context/products.context";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 export default function ButtonAppBar() {
     const { isOpen, setIsOpen } = useContext(CartContext);
     const { cart } = useContext(CartContext);
@@ -24,9 +20,10 @@ export default function ButtonAppBar() {
     return (
         <>
             <section className="nav">
-                <a href="/">Home</a>
-                <a href="/products">Products</a>
-                <a href="/cart">Cart <AiOutlineShoppingCart /></a>
+
+                <Link to={'/'}> Home</Link>
+                <Link to={'/products'}> Products</Link>
+                <Link to={'/cart'}>  <AiOutlineShoppingCart /> {cartCount} </Link>
             </section>
 
             <div className="second-hed">

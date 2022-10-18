@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -13,24 +13,90 @@ import { Container } from "@mui/material";
 import { ProductsContext } from "../../context/products.context";
 import { CartContext } from "../../context/cart.context";
 import PRODUCTS from "../../shop-data.json";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
+import "react-rangeslider/lib/index.css";
 
 export default function ActionAreaCard() {
-  const { products } = useContext(ProductsContext);
+  let filterProducts = PRODUCTS;
   const { searchInput, setSearchInput } = useContext(ProductsContext);
-  // const { handleSearch } = useContext(ProductsContext);
+  const [sliderValue, setSliderValue] = useState(50);
+  const [categoryDropdown, setCategoryDropdown] = useState("");
+  const [sizeDropdown, setSizeDropdown] = useState("");
   const { addItemToCart } = useContext(CartContext);
-  const { cart } = useContext(CartContext);
-  const filteredProducts = PRODUCTS.filter((el) => {
-    if (searchInput === null) {
-      return el;
-    } else {
-      return el.title.toLowerCase().includes(searchInput);
-    }
-  });
+  const category = ["Accesories", "Shorts", "Tops", "Jeans", "Outwear"];
+  const size = ["2XS", "XS", "S", "M", "L", "XL"];
+  const color = ["Red", "Blue", "White", "Gold", "Grey"];
+  const categoryHandley = (option) => {
+    setCategoryDropdown(option);
+  };
+  const sizeHandley = (option) => {
+    setSizeDropdown(option);
+  };
+  const sliderChange = (e) => {
+    setSliderValue(Number(e.target.value));
+  };
+  console.log("Size", sizeDropdown?.value);
+  console.log(Boolean(sizeDropdown?.value));
+  console.log(Boolean(categoryDropdown?.value, "Cat"));
 
+  switch (true) {
+    case searchInput !== "":
+      filterProducts = filterProducts.filter((el) =>
+        el.title.toLowerCase().includes(searchInput)
+      );
+    case sliderValue > 50: {
+      filterProducts = filterProducts.filter(
+        (el) => el.price >= sliderValue && el.price <= 2000
+      );
+    }
+
+    case Boolean(categoryDropdown?.value): {
+      filterProducts = filterProducts.filter(
+        (el) => el.type === categoryDropdown.value
+      );
+    }
+
+    case Boolean(sizeDropdown?.value): {
+      filterProducts = filterProducts.filter(
+        (el) => el.size === sizeDropdown.value
+      );
+    }
+  }
   return (
     <>
+      <section className="dropdowns">
+        <Dropdown
+          menuClassName="myMenuClassName"
+          options={category}
+          value={categoryDropdown}
+          placeholder={"Category"}
+          onChange={categoryHandley}
+        />
+        <Dropdown
+          menuClassName="myMenuClassName"
+          options={size}
+          value={sizeDropdown}
+          placeholder={"Size"}
+          onChange={sizeHandley}
+        />
+
+        <div className="slider-container">
+          <span className="range">Price: {sliderValue} $ - 2000 $</span>
+          {/* <span className="max-range">2000 $</span> */}
+          <input
+            type="range"
+            min="50"
+            max="2000"
+            value={sliderValue}
+            class="slider"
+            id="myRange"
+            onChange={sliderChange}
+          />
+        </div>
+      </section>
       <h1 className="page-title">Men's Festival Clothing</h1>
+
       <p className="page-p">
         Dreaming of neon, metallic and tie-dye? It must be festival season.
         Invent your own style with our edit of men's festival clothing,
@@ -49,10 +115,10 @@ export default function ActionAreaCard() {
           justifyContent="center"
           alignItems="center"
         >
-          {filteredProducts.map((item, i) => {
+          {filterProducts.map((item, i) => {
             return (
               <>
-                <Grid item key={i.id} xs={12} sm={6} md={4}>
+                <Grid item key={item.id} xs={12} sm={6} md={4}>
                   <Card className="card" sx={{ maxWidth: 345 }}>
                     <CardActionArea>
                       <CardMedia

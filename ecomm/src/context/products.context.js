@@ -9,7 +9,7 @@ export const ProductsContext = createContext({
 
 export const ProductsProvider = ({ children }) => {
     const [products, setProducts] = useState(PRODUCTS);
-    const [searchInput, setSearchInput] = useState(null)
+    const [searchInput, setSearchInput] = useState('')
 
     const handleSearch = (e) => {
         setSearchInput(e.target.value.toLowerCase())
