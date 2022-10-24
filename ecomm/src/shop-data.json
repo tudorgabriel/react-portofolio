@@ -24,7 +24,8 @@
     "price": 145.99,
     "image": "https://images.asos-media.com/products/asos-design-check-regular-fit-puffer-in-brown-and-orange-with-hood/200962541-1-mustard?$n_320w$&wid=317&fit=constrain",
     "type" : "Tops",
-    "size": "XL"
+    "size": "XL",
+    "color":"White"
 
   },
   {
@@ -33,7 +34,9 @@
     "price": 145.99,
     "image": "https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=739&q=80",
     "type" : "Jeans",
-    "size": "XL"
+    "size": "XL",
+    "style": "Puffer"
+    
 
   },
   {
@@ -42,7 +45,8 @@
     "price": 145.99,
     "image": "https://images.asos-media.com/products/asos-dark-future-oversized-hoodie-in-faux-fur-with-logo-embroidery-in-light-brown/202522994-1-lightbrown?$n_320w$&wid=317&fit=constrain",
     "type": "Outwear",
-    "size": "XL"
+    "size": "XL",
+    "material":"Leather"
 
   },
   {
@@ -51,7 +55,8 @@
     "price": 145.99,
     "image": "https://images.asos-media.com/products/asos-design-check-regular-fit-puffer-in-brown-and-orange-with-hood/200962541-1-mustard?$n_320w$&wid=317&fit=constrain",
     "type": "Shorts",
-    "size": "XL"
+    "size": "XL",
+    "brand": "Adidas"
 
   },
   {
@@ -60,7 +65,8 @@
     "price": 145.99,
     "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
     "type" : "Jeans",
-    "size": "XL"
+    "size": "XL",
+    "bodyFit":"Tall"
 
   },
   {

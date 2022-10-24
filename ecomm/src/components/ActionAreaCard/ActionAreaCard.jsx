@@ -16,74 +16,136 @@ import PRODUCTS from "../../shop-data.json";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import "react-rangeslider/lib/index.css";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+import { useEffect } from "react";
 
 export default function ActionAreaCard() {
+  const { addItemToCart } = useContext(CartContext);
   let filterProducts = PRODUCTS;
   const { searchInput, setSearchInput } = useContext(ProductsContext);
   const [sliderValue, setSliderValue] = useState(50);
-  const [categoryDropdown, setCategoryDropdown] = useState("");
-  const [sizeDropdown, setSizeDropdown] = useState("");
-  const { addItemToCart } = useContext(CartContext);
-  const category = ["Accesories", "Shorts", "Tops", "Jeans", "Outwear"];
-  const size = ["2XS", "XS", "S", "M", "L", "XL"];
-  const color = ["Red", "Blue", "White", "Gold", "Grey"];
-  const categoryHandley = (option) => {
-    setCategoryDropdown(option);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [currentItems, setCurrentItems] = useState([filterProducts]);
+  const [pageCount, setPageCount] = useState(0);
+  const recordsPerPage = 10;
+
+  const handlePage = (event, value) => {
+    setCurrentPage(value);
   };
-  const sizeHandley = (option) => {
-    setSizeDropdown(option);
-  };
+
   const sliderChange = (e) => {
     setSliderValue(Number(e.target.value));
   };
-  console.log("Size", sizeDropdown?.value);
-  console.log(Boolean(sizeDropdown?.value));
-  console.log(Boolean(categoryDropdown?.value, "Cat"));
+  const dropdownArr = [
+    {
+      name: "category",
+      options: ["Accesories", "Shorts", "Tops", "Jeans", "Outwear"],
+    },
+    { name: "size", options: ["2XS", "XS", "S", "M", "L", "XL"] },
+    { name: "color", options: ["Red", "Blue", "White", "Gold", "Grey"] },
+    {
+      name: "style",
+      options: ["Puffer", "Bomber Jacket", "Shackets", "Other", "Denim jacket"],
+    },
+    { name: "material", options: ["Leather", "Non Leather"] },
+    { name: "brand", options: ["Asos", "Asos Design", "Abercombie", "Adidas"] },
+    { name: "bodyFit", options: ["Main Collection", "Plus Size", "Tall"] },
+  ];
+  const [dropdownValues, setDropDownValues] = useState({
+    category: "",
+    size: "",
+    color: "",
+    style: "",
+    material: "",
+    brand: "",
+    bodyFit: "",
+  });
 
-  switch (true) {
-    case searchInput !== "":
-      filterProducts = filterProducts.filter((el) =>
-        el.title.toLowerCase().includes(searchInput)
-      );
-    case sliderValue > 50: {
-      filterProducts = filterProducts.filter(
-        (el) => el.price >= sliderValue && el.price <= 2000
-      );
-    }
+  const dropdownChangeHandler = (option, dropdownName) => {
+    setDropDownValues((prevValues) => ({
+      ...prevValues,
+      [dropdownName]: option?.value,
+    }));
+  };
 
-    case Boolean(categoryDropdown?.value): {
-      filterProducts = filterProducts.filter(
-        (el) => el.type === categoryDropdown.value
-      );
-    }
-
-    case Boolean(sizeDropdown?.value): {
-      filterProducts = filterProducts.filter(
-        (el) => el.size === sizeDropdown.value
-      );
-    }
+  if (searchInput !== "") {
+    filterProducts = filterProducts.filter((el) =>
+      el.title.toLowerCase().includes(searchInput)
+    );
   }
+
+  if (sliderValue > 50) {
+    filterProducts = filterProducts.filter(
+      (el) => el.price >= sliderValue && el.price <= 2000
+    );
+  }
+
+  if (dropdownValues.category) {
+    filterProducts = filterProducts.filter(
+      (el) => el.type === dropdownValues.category
+    );
+  }
+
+  if (dropdownValues.size) {
+    filterProducts = filterProducts.filter(
+      (el) => el.size === dropdownValues.size
+    );
+  }
+  if (dropdownValues.color) {
+    filterProducts = filterProducts.filter(
+      (el) => el.color === dropdownValues.color
+    );
+  }
+  if (dropdownValues.style) {
+    filterProducts = filterProducts.filter(
+      (el) => el.style === dropdownValues.style
+    );
+  }
+  if (dropdownValues.material) {
+    filterProducts = filterProducts.filter(
+      (el) => el.material === dropdownValues.material
+    );
+  }
+  if (dropdownValues.brand) {
+    filterProducts = filterProducts.filter(
+      (el) => el.brand === dropdownValues.brand
+    );
+  }
+  if (dropdownValues.bodyFit) {
+    filterProducts = filterProducts.filter(
+      (el) => el.bodyFit === dropdownValues.bodyFit
+    );
+  }
+
+  useEffect(() => {
+    const indexOfLastRecord = currentPage * recordsPerPage;
+    const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
+    setCurrentItems(
+      filterProducts.slice(indexOfFirstRecord, indexOfLastRecord)
+    );
+    setPageCount(Math.ceil(filterProducts.length / recordsPerPage));
+  }, [filterProducts, currentPage]);
   return (
     <>
       <section className="dropdowns">
-        <Dropdown
-          menuClassName="myMenuClassName"
-          options={category}
-          value={categoryDropdown}
-          placeholder={"Category"}
-          onChange={categoryHandley}
-        />
-        <Dropdown
-          menuClassName="myMenuClassName"
-          options={size}
-          value={sizeDropdown}
-          placeholder={"Size"}
-          onChange={sizeHandley}
-        />
-
+        {dropdownArr.map((item, index) => {
+          return (
+            <Dropdown
+              placeholderClassName="myPlaceholderClassName"
+              controlClassName="myControlClassName"
+              className="drop"
+              key={index}
+              menuClassName="myMenuClassName"
+              options={item.options}
+              value={item[0]}
+              placeholder={`Select ${item.name}`}
+              onChange={(option) => dropdownChangeHandler(option, item.name)}
+            />
+          );
+        })}
         <div className="slider-container">
           <span className="range">Price: {sliderValue} $ - 2000 $</span>
-          {/* <span className="max-range">2000 $</span> */}
           <input
             type="range"
             min="50"
@@ -96,7 +158,6 @@ export default function ActionAreaCard() {
         </div>
       </section>
       <h1 className="page-title">Men's Festival Clothing</h1>
-
       <p className="page-p">
         Dreaming of neon, metallic and tie-dye? It must be festival season.
         Invent your own style with our edit of men's festival clothing,
@@ -115,7 +176,7 @@ export default function ActionAreaCard() {
           justifyContent="center"
           alignItems="center"
         >
-          {filterProducts.map((item, i) => {
+          {currentItems.map((item, i) => {
             return (
               <>
                 <Grid item key={item.id} xs={12} sm={6} md={4}>
@@ -160,6 +221,15 @@ export default function ActionAreaCard() {
           })}
         </Grid>
       </Container>
+      <section className="pagination">
+        <Stack className="stack" spacing={5}>
+          <Pagination
+            onChange={handlePage}
+            page={currentPage}
+            count={pageCount}
+          />
+        </Stack>
+      </section>
     </>
   );
 }

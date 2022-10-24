@@ -34,15 +34,16 @@
 
 
 .slider-container{
+    margin-top: 0.5rem;
     width: 15%
 }
 
 .slider{
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
-    width: 100%;
+    width: 95%;
     height: 1rem;
-    background-color: gray;
+    background-color: white;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
@@ -71,6 +72,31 @@
  .range{
     letter-spacing: 2.3px;
  }
+
+ .dropdowns{
+     background-color: gray;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+
+    .drop{
+        margin-top: 1rem;
+        background-color: gray;
+        
+    }
+    .myControlClassName{
+        background-color: gray;
+        font-size: 1rem;
+        color: white;
+        font-weight: 500;
+        letter-spacing: 1px;
+
+    }
+ }
+
+
 
 
 
