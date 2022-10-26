@@ -57,7 +57,7 @@ export const CartProvider = ({ children }) => {
         const newCartCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0)
         const totalPrice = cart.reduce((total, cartItem) => total + cartItem.price * cartItem.quantity, 0)
         setCartCount(newCartCount)
-        setTotal(totalPrice)
+        setTotal(totalPrice.toFixed(2))
     }, [cart])
     const value = { isOpen, setIsOpen, cart, setCart, addItemToCart, cartCount, total, removeItemToCart, removeAllItems };
 

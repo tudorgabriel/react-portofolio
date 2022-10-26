@@ -3,11 +3,11 @@ import React, { useContext, useState } from "react";
 import { AiOutlineShoppingCart, AiOutlineSearch } from 'react-icons/ai';
 import '../Nav/ButtonAppBar.scss';
 import { CartContext } from "../../context/cart.context";
-import CartModal from "../Cart/CartModal";
 import '../../components/Cart/CartModal.scss';
 import '../../context/products.context';
 import { ProductsContext } from "../../context/products.context";
 import { useNavigate, Link } from "react-router-dom";
+import CartModal from "../Cart/CartModal";
 export default function ButtonAppBar() {
     const { isOpen, setIsOpen } = useContext(CartContext);
     const { cart } = useContext(CartContext);
@@ -23,7 +23,7 @@ export default function ButtonAppBar() {
 
                 <Link to={'/'}> Home</Link>
                 <Link to={'/products'}> Products</Link>
-                <Link to={'/cart'}>  <AiOutlineShoppingCart /> {cartCount} </Link>
+                <CartModal />
             </section>
 
             <div className="second-hed">
