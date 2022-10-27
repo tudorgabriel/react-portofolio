@@ -21,6 +21,7 @@
     text-align: center;
     padding-top: 1rem;
     line-height: 1rem;
+    letter-spacing: 2px;
 }
 
 .page-p{
@@ -28,6 +29,7 @@
    max-width: 55%;
    text-align: center;
    margin: 0 auto;
+   letter-spacing: 2px;
 }
 
 
@@ -94,6 +96,20 @@
         letter-spacing: 1px;
 
     }
+ }
+
+ .no-results-section{
+    background-color: powderblue;
+    margin:0 auto;
+    text-align: center;
+    width: 90%;
+    height: 50%;
+
+    h1,p{
+        letter-spacing: 2px;
+        padding:1rem
+    }
+
  }
 
 

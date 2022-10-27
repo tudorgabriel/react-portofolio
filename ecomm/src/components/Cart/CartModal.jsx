@@ -56,47 +56,52 @@ export default function CartModal() {
       >
         <Fade in={open}>
           <Box className="modal" sx={style}>
-            <h3 className="h-bag"> My bag </h3>
-            {cart.map((item, index) => {
-              return (
-                <>
-                  <section className="cart-section">
-                    <div className="img-prod">
-                      <img className="img-cart" src={item.image} alt="" />
-                    </div>
-                    <div className="infos-prod">
-                      <h3>{item.title.substr(0, 20)}</h3>
-                      <p> Price: {item.price} $</p>
-                      <p>Qty : {item.quantity}</p>
-                      <button
-                        onClick={() => addItemToCart(item)}
-                        className="increment-btn"
-                      >
-                        +
-                      </button>
-                      <button
-                        onClick={() => removeItemToCart(item)}
-                        className="increment-btn"
-                      >
-                        -
-                      </button>
-                      <br></br>
-                      <AiFillDelete
-                        onClick={() => removeAllItems(item)}
-                        className="delete-icon"
-                      />
-                    </div>
-                  </section>
-                </>
-              );
-            })}
-            <section className="buttons-section">
-              <button onClick={handleClick}>View Bag</button>
-              <button>Checkout</button>
-            </section>
-            <div className="footer-mod">
-              <h4>Total : {total} $</h4>
-            </div>
+            <>
+              <h3 className="h-bag"> My bag </h3>
+              {cart.map((item, index) => {
+                return (
+                  <>
+                    <section className="cart-section">
+                      <div className="img-prod">
+                        <img className="img-cart" src={item.image} alt="" />
+                      </div>
+                      <div className="infos-prod">
+                        <h3>{item.title.substr(0, 20)}</h3>
+                        <p> Price: {item.price} $</p>
+                        <p>Qty : {item.quantity}</p>
+                        <button
+                          onClick={() => addItemToCart(item)}
+                          className="increment-btn"
+                        >
+                          +
+                        </button>
+                        <button
+                          onClick={() => removeItemToCart(item)}
+                          className="increment-btn"
+                        >
+                          -
+                        </button>
+                        <br></br>
+                        <AiFillDelete
+                          onClick={() => removeAllItems(item)}
+                          className="delete-icon"
+                        />
+                      </div>
+                    </section>
+                  </>
+                );
+              })}
+              {cart.length > 1 && <h1>empty</h1>}
+              <>
+                <section className="buttons-section">
+                  <button onClick={handleClick}>View Bag</button>
+                  <button>Checkout</button>
+                </section>
+                <div className="footer-mod">
+                  <h4 className="h4-footer">Total : {total} $</h4>
+                </div>
+              </>
+            </>
           </Box>
         </Fade>
       </Modal>
